@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html> 
+    <head>  
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="main.css">
+      
+      <link rel="stylesheet" href="login.css">
+      <link rel="stylesheet" href="bottom-navbar.css">
+      <link rel="stylesheet" href="sidenav.css">
+      <link rel="stylesheet" href="table-info.css">
+      <link rel="stylesheet" href="topright-sidenav.css">
+      <link rel="stylesheet" href="/Model Library/topnav.css">
+      <link rel="stylesheet" href="/Model Library/topleft-sidenav.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="register.css">
+                    
+      
+
+    </head>
+    <body>
+      <style>
+        body {
+          background-color: lightgray;
+        }
+      </style>
+      <header></header>
+      <nav class="topnav-container">
+        <div id="toggle-topleft-sidenav" class="topleft-sidenav">
+            <div class="dropdown">
+              <button href="#" onclick="mydropFunction('myDropdown')" class="topleft-sidenav-dropbtn">Model Library
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#">aaa</a>
+                <br>
+                <a href="#">bbb</a>
+                <br>
+                <a href="#">ccc</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button href="#" onclick="mydropFunction('myDropdown-1')" class="topleft-sidenav-dropbtn">Fabrication Center
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown-1">
+                <a href="#">ddd</a>
+                <br>
+                <a href="#">eee</a>
+                <br>
+                <a href="#">fff</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button href="#" onclick="mydropFunction('myDropdown-2')" class="topleft-sidenav-dropbtn">Schedule Viewer
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown-2">
+                <a href="#">ggg</a>
+                <br>
+                <a href="#">hhh</a>
+                <br>
+                <a href="#">iii</a>
+              </div>
+            </div>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onclick="topleftNav()" style="z-index: 2">
+            <div class="animated-icon"><span></span><span></span><span></span></div>
+          </button>
+          <!-- <div class="logo-box">
+            <a href="#" target="_blank">
+            <img src="/Model Library/ntust-logo.png" class="topnav-logo">
+            </a>
+          </div>  -->
+          <a href="#" id="login-modal">
+            <button id="login-modal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-box-arrow-in-right"></i>
+            </button>
+          </a>  
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="login-container">
+                    <div class="login-form">
+                        <form action="#" class="login-sub-form">
+                            <div class="login-upper-form">
+                                <h2>Login</h2>
+                                <label>Username</label> <br>
+                                <input type="text" name="username" required=""> <br>
+                                <label>Password</label> <br>
+                                <div class="login-input-icons">
+                                    <i class="bi bi-eye icon" id="togglePassword" onclick="myFunction()"></i> 
+                                    <input class="login-input-field" type="password" name="password" id="password" required=""> 
+                                </div>
+                                <br>
+                                <div class="login-page-btn">
+                                    <button type="submit" id="submit">Log In</button> <br>
+                                </div>
+                            </div>
+                            <!-- <div class="login-bottom-form">
+                            <div class="no-account">Don't have an account?</div>
+                                <a href="#" class="login-signup"><button id="signup" type="button">Signup</button></a>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-target="#reset-Pass" data-bs-toggle="modal" data-bs-dismiss="modal">Forgot Password?</button>
+                  <button type="button" class="btn btn-primary" data-bs-target="#register-form" data-bs-toggle="modal" data-bs-dismiss="modal">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="reset-Pass"> 
+          <div class="modal-dialog modal-dialog-centered"> 
+              <div class="modal-content"> 
+                  <div class="modal-header"> 
+                      <h5 class="modal-title" id="reset-Pass"> 
+                          Forget password
+                      </h5> 
+                      <button type="button"
+                              class="btn-close" 
+                              data-bs-dismiss="modal" 
+                              aria-label="Close"> 
+                      </button> 
+                  </div> 
+                  <div class="modal-body"> 
+                      <form> 
+                          <div class="mb-3"> 
+                              <label for="exampleInputPassword1" 
+                                      class="form-label"> 
+                                  Email
+                              </label> 
+                              <input type="email"
+                                     class="form-control" 
+                                     id="exampleInputPassword1"> 
+                          </div> 
+                          <button type="submit" class="btn btn-secondary"> 
+                              Reset 
+                          </button> 
+                      </form> 
+                  </div> 
+                  <div class="modal-footer"> 
+                      <button class="btn btn-primary" 
+                              data-bs-target="#exampleModal" 
+                              data-bs-toggle="modal" 
+                              data-bs-dismiss="modal"> 
+                          Back to Login 
+                      </button> 
+                  </div> 
+              </div> 
+          </div> 
+      </div> 
+
+      <div class="modal fade" id="register-form"> 
+        <div class="modal-dialog" style="max-width: 735px;" id="register"> 
+            <div class="modal-content"> 
+                <div class="modal-header"> 
+                    <h5 class="modal-title" id="register-form"> 
+                      
+                    </h5> 
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> 
+                </div> 
+
+                <div class="modal-body"> 
+                  <div class="register-wrapper">
+                    <form class="register-sub-form">
+                        <div class="register-form">
+                            <h2>Registration Form</h2>
+                            <div class="row row-space">
+                                <div class="col-6">
+                                    <div class="input-box">
+                                        <label>First Name *</label>
+                                        <input type="text" placeholder="Please enter your first name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-box">
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="Please enter your last name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <label>Username *</label>
+                                <input type="text" placeholder="Please enter your username">
+                            </div>
+                            <div class="input-box">
+                                <label>Email *</label>
+                                <input type="email" placeholder="Please enter your email address" required="">
+                            </div>
+                            <div class="input-box">
+                                <label>Occupation *</label>
+                                <input type="text" placeholder="Please enter your occupation" required="">
+                            </div>
+                            <div class="input-box">
+                                <label>Company / Organization *</label>
+                                <input type="text" placeholder="Please enter your company / organization" required="">
+                            </div>  
+                            <div class="input-box">
+                                <label>Country</label>
+                                <select class="countrypicker" >
+                                    
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <label>Password *</label>
+                                <div class="login-input-icons">
+                                  <i class="bi bi-eye icon" id="togglePassword" onclick="myFunction1()"></i> 
+                                  <input class="login-input-field" type="password" name="password" id="password1" placeholder="Please enter your password" required="">
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <label>Confirm Password *</label>
+                                <div class="login-input-icons">
+                                  <i class="bi bi-eye icon" id="togglePassword" onclick="myFunction2()"></i> 
+                                  <input class="login-input-field" type="password" name="password" id="password2" placeholder="Please confirm your password" required="">
+                                </div>
+                            </div> 
+                            <div class="register-btn">
+                                <button type="submit">Register</button>
+                            </div>  
+                                
+                        </div>
+                    </form>
+                </div>
+                </div> 
+
+                <div class="modal-footer"> 
+                    <button class="btn btn-primary" 
+                            data-bs-target="#exampleModal" 
+                            data-bs-toggle="modal" 
+                            data-bs-dismiss="modal"> 
+                        Back to Login 
+                    </button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+          <div class="topright-sidenav" id="toggle-topright-sidenav">
+            <div class="dropdown">
+              <a  href="index.html"><button class="topleft-sidenav-dropbtn">
+                Setting
+              </button></a>
+              
+      
+              
+
+
+              <!-- <button href="#" onclick="mydropFunction('myDropdown-6')" class="topleft-sidenav-dropbtn">Model Library
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown-6">
+                <a href="#">aaa</a>
+                <br>
+                <a href="#">bbb</a>
+                <br>
+                <a href="#">ccc</a>
+              </div> -->
+            </div>
+          </div>
+            <button id="toggle-usermenu-btn" class="toggle-usermenu-btn" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onclick="toprightNav()" style="z-index: 2">
+              
+              <div class="topright-nav-closebtn"><span></span><span></span><span></span></div>
+            </button>
+            <i class="bi bi-person" id="user-icon"></i>
+        </nav>
+
+          
+
+           <!-- <div class="toggle-checkbox" id="toggle-checkbox">
+              <button><i class="bi bi-person"></i></button>
+            </div> -->
+
+
+        <!-- SIDE NAV -->
+        <aside>
+          <div class="aside-container" id="aside-container">
+              <div class="side-navbar">
+                <div class="side-dropup">
+                  <button type="button" class="side-dropbtn"><i class="bi bi-folder-fill"></i>Library</button>
+                  <div class="side-dropup-content">
+                    <button type="button" class="side-dropbtn"><i class="bi bi-upload"></i>Upload</button>
+                    <button type="button" class="side-dropbtn"><i class="bi bi-wrench-adjustable"></i>CO2</button>
+                  </div>
+                </div>
+                <hr />
+                <div class="side-dropup">
+                  <button type="button" class="side-dropbtn"><i class="bi bi-gear-wide-connected"></i>Factory</button>
+                  <div class="side-dropup-content">
+                    <div class="side-dropside">
+                      <button type="button" class="side-dropbtn" onclick="mydropFunction('myDropdown-10')"><i class="bi bi-upload"></i>Upload</button>
+                        <div class="side-dropside-content" id="myDropdown-10">
+                          <form id="form1"> 
+                            <div class="upload-3d-container">
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label"><i class="bi bi-file-earmark-plus"></i>DWG Upload</label>
+                                    <input class="form-control" type="file" name="file" id="file1">
+                                    <div class="progress-wrapper">
+                                      <div id="progress-bar-file1" class="progress"></div>
+                                    </div>
+                                    <button id="upload-btn" type="button" onclick="postFile()">Upload File</button>
+                                </div>  
+                            </div>
+                            </form>
+                        </div>
+                      <div class="side-dropside">
+                        <button type="button" class="side-dropbtn" onclick="mydropFunction('myDropdown-11')"><i class="bi bi-wrench-adjustable"></i>Parameter</button>
+                        <!-- <div class="par-side-dropside-content" id="myDropdown-11">
+                          <div class="slider-wrapper">
+                            <label class="parameter-label" id="height">Height</label>
+                            <span class="value-left">0</span>
+                            <div class="range-wrap" style="width: 50%;"> 
+                                <input class="range" type="range" min="0" max="100" value="50" steps="1" id="slider">
+                                <output class="bubble"></output>
+                            </div>
+                              <span class="value-right">100</span>
+                          </div> 
+                            
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="side-dropup">
+                  <button type="button" class="side-dropbtn"><i class="bi bi-calendar3"></i>Schedule</button>
+                  <div class="side-dropup-content">
+                    <button type="button" class="side-dropbtn"><i class="bi bi-info-lg"></i>Info</button>
+                    <button type="button" class="side-dropbtn"><i class="bi bi-display"></i>Display</button>
+                    <button type="button" class="side-dropbtn"><i class="bi bi-search"></i>Search</button>
+                    <button type="button" class="side-dropbtn"><i class="bi bi-columns-gap"></i>Status</button>
+                  </div>
+                </div>
+                  <!-- <div class="dropup">
+                      <button onclick="toggleTable('myTable')" type="button" class="dropbtn">Info</button>
+                  </div>
+                  <div class="dropup">
+                      <button class="dropbtn" onclick="mydropFunction('myDropdown-4')">Display</button>
+                      <div class="dropup-content" id="myDropdown-4">
+                          <a href="#" onclick="toggleTable('myTable')">None</a>
+                          <hr />
+                          <a href="#" onclick="toggleTable('myTable-mode-1')">Section Box</a>
+                          <hr />
+                          <a href="#" onclick="toggleTable('myTable-mode-2')">Level Plan</a>
+                          <hr />
+                          <a href="#" onclick="toggleTable('myTable-mode-3')">Elevation</a>
+                          <hr />
+                      </div>
+                  </div>
+                  <div class="dropup" id="search">
+                      <button type="button" class="dropbtn" onclick="mydropFunction('myDropdown-5')">Search</button>
+                      <div class="dropup-content" id="myDropdown-5">
+                          <input type="text" class="search-input" placeholder="Search...">
+                          <span>
+                              <button class="search-btn" type="button">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                  </svg>
+                              </button>
+                          </span>
+                      </div>
+                  </div>
+                  <div class="dropup">
+                      <button class="dropbtn">Status</button>
+                  </div> -->
+              </div>
+          </div>
+      </aside>
+      <main>
+        
+      </main>
+      <section id="bottom-navbar">
+        <div class="bottom-container">
+          <div class="bottom-navbar">
+            <div class="bottom-dropup">
+              <button type="button" class="bottom-dropbtn"><i class="bi bi-camera" id="nav-logo"></i>Camera</button>
+              <div class="bottom-dropup-content">
+                <button type="button" class=""><i class="bi bi-arrows-move"></i>Navigation</button>
+                <button type="button" class=""><i class="bi bi-vinyl"></i>Projection</button>
+              </div>
+            </div>
+              <button type="button" class="bottom-dropbtn"><i class="bi bi-funnel-fill" id="nav-logo"></i>Filter</button>
+              <button type="button" class="bottom-dropbtn"><i class="bi bi-diagram-3-fill" id="nav-logo"></i>MD Tree</button>
+              <button type="button" class="bottom-dropbtn"><i class="bi bi-file-earmark-text-fill" id="nav-logo"></i>Property</button>
+              <button type="button" class="bottom-dropbtn"><i class="bi bi-rulers" id="nav-logo"></i>Measure</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- ---------------------------DEFAULT MODE TABLE----------------------------------------- -->
+      <div class="table-info-hidden" id="myTable">
+          <table>
+              <thead>
+                  <caption>Info</caption>
+              </thead>
+              <tbody>
+                  <tr>
+                      <th style="width: 100px;" data-th="Name">Name</th>
+                      <th style="width: 150px;" data-th="Name-value">N005</th>
+      
+                  </tr>
+                  <tr>
+                      <td data-th="Type">Type</td>
+                      <td data-th="Type-value">GL</td>
+      
+                  </tr>
+                  <tr>
+                      <td data-th="Item-ID">ID</td>
+                      <td data-th="Item-ID-value">00000000</td>
+      
+                  </tr>
+                  <tr>
+                      <td data-th="Locate">Locate</td>
+                      <td data-th="Locate-value">2F-E-ABC</td>
+      
+                  </tr>
+                  <tr>
+                      <td data-th="Status">Status</td>
+                      <td data-th="Status-value">未安裝</td>
+      
+                  </tr>
+              </tbody>
+              <tfoot>
+                  <div>
+                      <button class="table-info-closebtn" onclick="toggleTable('myTable')">Close</button>
+                  </div>
+              </tfoot>
+          </table>
+      </div>
+          <!-- ---------------------------DEFAULT MODE TABLE END----------------------------------------- -->
+
+          <!-- ------------------------------MODE 1 TABLE START------------------------------------------ -->
+          <div class="table-info-hidden" id="myTable-mode-1">
+            <table>
+              <thead>
+                <caption>Info Mode</caption>
+              </thead>
+              <tbody>
+              <tr>
+                <th style="width: 200px;">Mode 1</th>
+                <th style="width: 50px;">ON</th>
+                <th style="width: 50px;">OFF</th>
+              </tr>
+              <tr>
+                <td data-th="Name">Name</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Type">Type</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Item-ID">ID</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Locate">Locate</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Status">Status</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              </tbody>
+              <tfoot>
+                    <div>
+                      <button class="table-info-closebtn" onclick="toggleTable('myTable-mode-1')">Close</button>
+                    </div>  
+              </tfoot>
+            </table>
+          </div>
+          <!-- ---------------------------------MODE 1 TABLE END----------------------------------------- -->
+
+          <!-- --------------------------------MODE 2 TABLE START---------------------------------------- -->
+          <div class="table-info-hidden" id="myTable-mode-2">
+            <table>
+              <thead>
+                <caption>Info Mode</caption>
+              </thead>
+              <tbody>
+              <tr>
+                <th style="width: 200px;">Mode 2</th>
+                <th style="width: 50px;">ON</th>
+                <th style="width: 50px;">OFF</th>
+              </tr>
+              <tr>
+                <td data-th="Name">Name</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Type">Type</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Item-ID">ID</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Locate">Locate</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Status">Status</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              </tbody>
+              <tfoot>
+                    <div>
+                      <button class="table-info-closebtn" onclick="toggleTable('myTable-mode-2')">Close</button>
+                    </div>  
+              </tfoot>
+            </table>
+          </div>
+          <!-- ---------------------------------MODE 2 TABLE END----------------------------------------- -->
+
+          <!-- --------------------------------MODE 3 TABLE START---------------------------------------- -->
+          <div class="table-info-hidden" id="myTable-mode-3">
+            <table>
+              <thead>
+                <caption>Info Mode</caption>
+              </thead>
+              <tbody>
+              <tr>
+                <th style="width: 200px;">Mode 3</th>
+                <th style="width: 50px;">ON</th>
+                <th style="width: 50px;">OFF</th>
+              </tr>
+              <tr>
+                <td data-th="Name">Name</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Type">Type</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Item-ID">ID</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Locate">Locate</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              <tr>
+                <td data-th="Status">Status</td>
+                <td data-th="ON">v</td>
+                <td data-th="OFF">x</td>
+              </tr>
+              </tbody>
+              <tfoot>
+                    <div>
+                      <button class="table-info-closebtn" onclick="toggleTable('myTable-mode-3')">Close</button>
+                    </div>  
+              </tfoot>
+            </table>
+          </div> 
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+          <script src="sidenav.js"></script>
+          <script src="/loading.js"></script>
+          <script src="/Model Library/model-library.js"></script>
+          <script src="//unpkg.com/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script> 
+  
+    </body>
+</html>

@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+.topright-sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #f8f9fa!important;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 8px 0px 0px #888888;
+}
+
+.toggle-usermenu-btn {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    padding: 20px 10px;
+    border: none;
+    background-color: transparent;
+}
+
+ nav #user-icon{
+    font-size: 40px;
+    display: flex;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 20px 10px;
+    border: none;
+    background-color: transparent;
+}
+
+button#login-modal {
+    background: transparent;
+    border: none;
+    color: black;
+    padding: 5px 10px 0px 10px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 90px ;
+}
+
+button#login-modal i {
+    font-size: 35px;
+}
+
+.topright-nav-closebtn {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0 20px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    }
+    .topright-nav-closebtn span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    right: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    }
+    .topright-nav-closebtn span { 
+    background: black;
+    }
+    .topright-nav-closebtn span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    background-color: #777777;
+    display: none; 
+    }
+    .topright-nav-closebtn span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    background-color: #777777;
+    display: none;
+    }
+    .topright-nav-closebtn span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    background-color: #777777;
+    display: none;
+    }
+    
+    .topright-nav-closebtn.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    right: 8px;
+    display: block;
+    }
+    
+    .topright-nav-closebtn.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+    display: block;
+    }
+    
+    .topright-nav-closebtn.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 21px;
+    right: 8px;
+    display: block;
+    }
+
+    

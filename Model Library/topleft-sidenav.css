@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+nav {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.topleft-sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa!important;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 0px 0px 8px #888888;
+  }
+.topleft-sidenav button {
+    padding: 5px 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .topleft-sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .topleft-sidenav::-webkit-scrollbar { 
+    display: none; 
+  } 
+
+.topleft-sidenav-dropbtn {
+    padding: 20px 2.5rem;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.topleft-sidenav-dropbtn:hover, .topleft-sidenav-dropbtn:focus{
+    transform: translateY(-0.15em); 
+}
+  .animated-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0 20px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    }
+    .animated-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    }
+    .animated-icon span { 
+    background: black;
+    }
+    .animated-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    background-color: #777777;
+    }
+    .animated-icon span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    background-color: #777777;
+    }
+    .animated-icon span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    background-color: #777777;
+    }
+    
+    .animated-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    left: 8px;
+    }
+    
+    .animated-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+    }
+    
+    .animated-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 8px;
+    }
+
+   
+.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    padding: 10px;
+    overflow: auto;
+    min-width: 160px;
+    border-radius: 5px; 
+    z-index: 1;
+    
+  }
+  .dropdown-content a {
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .dropdown-content a:hover {
+    background-color: #555555;
+    margin-left: 8px;
+    border-radius: 5px;
+  }
+  .show {
+    display: block;
+  }
+   /* .dropdown:hover .dropdown-content {
+    display: block;
+  } */
+  .arrow {
+    border: 1px solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 0 0 3px 10px;
+  }

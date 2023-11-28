@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html> 
+    <head>  
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="uploadfile.css">
+      <link rel="stylesheet" href="/Schedule Viewer/sidenav.css">
+      <link rel="stylesheet" href="/Schedule Viewer/topright-sidenav.css">
+      <link rel="stylesheet" href="/Model Library/topnav.css">
+      <link rel="stylesheet" href="/Model Library/topleft-sidenav.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+      
+                    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script src="/Schedule Viewer/sidenav.js"></script>
+      <script src="/Model Library/model-library.js"></script>
+
+    </head>
+    <body>
+      <!-- <style>
+        body {
+          background: linear-gradient(to top left, #666699 0%, #669999 100%);
+        }
+      </style> -->
+      <header></header>
+      <nav class="topnav-container">
+        <div id="toggle-topleft-sidenav" class="topleft-sidenav">
+            <div class="dropdown">
+              <button href="#" onclick="mydropFunction('myDropdown')" class="topleft-sidenav-dropbtn">Model Library
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown">
+                <a href="#">aaa</a>
+                <br>
+                <a href="#">bbb</a>
+                <br>
+                <a href="#">ccc</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button href="#" onclick="mydropFunction('myDropdown-1')" class="topleft-sidenav-dropbtn">Fabrication Center
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown-1">
+                <a href="#">ddd</a>
+                <br>
+                <a href="#">eee</a>
+                <br>
+                <a href="#">fff</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button href="#" onclick="mydropFunction('myDropdown-2')" class="topleft-sidenav-dropbtn">Schedule Viewer
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown-2">
+                <a href="#">ggg</a>
+                <br>
+                <a href="#">hhh</a>
+                <br>
+                <a href="#">iii</a>
+              </div>
+            </div>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onclick="topleftNav()" style="z-index: 2">
+            <div class="animated-icon"><span></span><span></span><span></span></div>
+          </button>
+          <div class="logo-box">
+            <a href="#" target="_blank">
+            <img src="/Model Library/ntust-logo.png" class="topnav-logo">
+            </a>
+          </div> 
+
+          <div class="topright-sidenav" id="toggle-topright-sidenav">
+            <div class="dropdown">
+              <a href="index.html"><button class="topleft-sidenav-dropbtn">
+                Log In
+              </button></a>
+              <!-- <button href="#" onclick="mydropFunction('myDropdown-6')" class="topleft-sidenav-dropbtn">Model Library
+                <i id="arrow" class="arrow"></i>
+              </button>
+              <div class="dropdown-content" id="myDropdown-6">
+                <a href="#">aaa</a>
+                <br>
+                <a href="#">bbb</a>
+                <br>
+                <a href="#">ccc</a>
+              </div> -->
+            </div>
+          </div>
+            <button id="toggle-usermenu-btn" class="toggle-usermenu-btn" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onclick="toprightNav()" style="z-index: 2">
+              
+              <div class="topright-nav-closebtn"><span></span><span></span><span></span></div>
+            </button>
+            <i class="bi bi-person" id="user-icon"></i>
+        </nav>
+
+
+        <!-- SIDE NAV -->
+        <aside>
+          <a id="arrow-toggle" onmouseenter="showSidenav()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+              <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+            </svg>
+          </a>
+          <div class="aside-container" id="aside-container">
+            <div class="side-navbar">
+
+                <form id="form1"> 
+                <div class="upload-3d-container">
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label"><i class="bi bi-file-earmark-plus"></i>DWG Upload</label>
+                        <input class="form-control" type="file" name="file" id="file1">
+                        <div class="progress-wrapper">
+                          <div id="progress-bar-file1" class="progress"></div>
+                        </div>
+                        <button id="upload-btn" type="button" onclick="postFile()">Upload File</button>
+                    </div>  
+                </div>
+                </form>
+
+
+                <div class="parameter-container" id="parameter-container">
+                    <div class="dropdown">
+                        <button href="#" onclick="mydropFunction('myDropdown-6')" id="parameter-adjust"><i class="bi bi-sliders"></i>Parameter Adjustment
+                            <i id="arrow-dropdown" class="bi bi-caret-down-fill"></i></button>
+                        <div class="dropdown-content" id="myDropdown-6">
+                            <br>
+                            <label>PAR 1</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <br>
+                              <label>PAR 2</label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <br>
+                              <label>PAR 3</label>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                              <br>
+                              <button class="parameter-btn" type="submit">Change</button>
+                        </div>
+                    </div> 
+                </div>     
+            </div>
+      </div>
+      </aside>
+
+    <!--DOWNLOAD BUTTON-->
+    <div class="download-container">
+      
+        <div class="download-dropup">
+          <button class="drop-download-btn" onclick="mydropFunction('myDropdown-7')"><i class="bi bi-caret-up-fill"></i></button>
+          <div class="download-dropup-content" id="myDropdown-7">
+            <a href="#">DXF</a>
+            <hr/>
+            <a href="#">3dm</a>
+          </div>
+        </div>
+        
+        <button id="download-btn">DOWNLOAD</button>
+        
+    </div>
+          
+    <script src="/loading.js"></script>
+    </body>
+</html>
